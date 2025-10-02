@@ -8,13 +8,17 @@ from fastapi import APIRouter, Depends, Query
 # from app.controller.tenant.tenant_controller import (tenant_index, tenant_view,
 #                                                      tenant_update)
 router = APIRouter()
+
+
 @router.get("/tenants/plan/index")
 async def func_plan_index():
-    return {'jello':"hi"}
+    return {'jello': "hi"}
 
 
+@router.get("/tenants/plan/testing")
 async def func_plan_iaaandex():
     return {'jellasdfasdfasdfo': "hi"}
+
 
 # @router.get("/tenants/company/index")
 # async def func_company_index(name: Optional[str] = None,
@@ -34,12 +38,10 @@ async def func_plan_iaaandex():
 #         page=page,
 #     )
 
-
 # @router.get("/tenants/company/view/")
 # async def func_company_view(tenant_id: int = Query(...),
 #                             db: AsyncSession = Depends(get_db)):
 #     return await tenant_view(db, tenant_id)
-
 
 # @router.put('/tenants/company/update/')
 # async def func_company_update(tenant_id: int = Query(...),
