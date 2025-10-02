@@ -1,0 +1,18 @@
+services:
+  tenant-service:
+    build: .
+    ports:
+      - "8001:8000"
+    expose:
+      - "8001"
+    labels:
+      - "traefik.http.routers.tenants.rule=PathPrefix(`/auths`)"
+      - "traefik.http.services.tenants.loadbalancer.server.port=8000"
+    networks:
+      - traefik-net
+    volumes:
+      - .:/app
+
+networks:
+  traefik-net:
+    external: true
