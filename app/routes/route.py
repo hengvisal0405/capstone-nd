@@ -12,6 +12,10 @@ router = APIRouter()
 async def func_plan_index():
     return {'jello':"hi"}
 
+
+async def func_plan_iaaandex():
+    return {'jellasdfasdfasdfo': "hi"}
+
 # @router.get("/tenants/company/index")
 # async def func_company_index(name: Optional[str] = None,
 #                              email: Optional[str] = None,
